@@ -8,8 +8,10 @@ import java.util.Scanner;
 
 import architecture.Controleur;
 import architecture.Fenetre;
+import donnee.CocktailDAO;
 import donnee.NouvelleDAO;
 import donnee.StationSpatialeDAO;
+import modele.Cocktail;
 import modele.Nouvelle;
 import vue.VueAmis;
 import vue.VueCommentaires;
@@ -22,10 +24,10 @@ import vue.VueNouvellesEspace;
 public class App {
 
 	public static void main(String[] parametres) {
-		Controleur.choisirVuePrincipale(VueMirador.class);
+		//Controleur.choisirVuePrincipale(VueMirador.class);
 		//Controleur.choisirVuePrincipale(VueNouvelles.class);
 		//choisirVuePrincipale(VueNouvellesEspace.class);
-		Controleur.choisirVuePrincipale(VueMonnaies.class);
+		//Controleur.choisirVuePrincipale(VueMonnaies.class);
 		//Controleur.choisirVuePrincipale(VueCommentaires.class);
 		//Controleur.choisirVuePrincipale(VueMessages.class);
 		//Controleur.choisirVuePrincipale(VueAmis.class);
@@ -38,12 +40,18 @@ public class App {
 			System.out.println("TITRE : " + nouvelle.getTitre());
 		}*/
 		
-		StationSpatialeDAO stationDAO = new StationSpatialeDAO();
-		stationDAO.detaillerPosition();
+		//StationSpatialeDAO stationDAO = new StationSpatialeDAO();
+		//stationDAO.detaillerPosition();
+		
+		CocktailDAO cocktailDAO = new CocktailDAO();
+		List<Cocktail> cocktails = cocktailDAO.listerCocktails();
+		for(Cocktail cocktail:cocktails)
+		{
+			System.out.println(cocktail.getNom());
+		}
 		
 		
-		
-		Fenetre.launch(Fenetre.class, parametres);	
+		//Fenetre.launch(Fenetre.class, parametres);	
 	}
 
 }
