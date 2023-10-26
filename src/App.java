@@ -45,11 +45,14 @@ public class App {
 		
 		CocktailDAO cocktailDAO = new CocktailDAO();
 		List<Cocktail> cocktails = cocktailDAO.listerCocktails();
+		System.out.println("===========================");
 		for(Cocktail cocktail:cocktails)
 		{
 			System.out.println(cocktail.getNom());
 		}
 		
+		ChercheurDeCocktail chercheur = new ChercheurDeCocktail(cocktails);
+		chercheur.executer();		
 		
 		//Fenetre.launch(Fenetre.class, parametres);	
 	}
