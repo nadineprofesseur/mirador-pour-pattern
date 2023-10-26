@@ -20,13 +20,13 @@ import org.xml.sax.SAXException;
 import modele.Nouvelle;
 
 public class NouvelleDAO {
-	
+	public static final String URL_LISTE_SORTIES = "https://www.jeuxactu.com/rss/sorties.rss";	
 	public List<Nouvelle> listerNouvelles()
 	{
 		List<Nouvelle> nouvelles = new ArrayList<Nouvelle>();
 		
 		// TELECHARGER = Recupere les donnees de internet en xml
-		String URL_LISTE_SORTIES = "https://www.jeuxactu.com/rss/sorties.rss";
+
 		String xml = "";
 		try {
 			URL url = new URL(URL_LISTE_SORTIES);

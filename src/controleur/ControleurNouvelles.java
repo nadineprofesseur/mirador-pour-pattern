@@ -20,7 +20,7 @@ public class ControleurNouvelles extends Controleur {
 		VueNouvelles vue = VueNouvelles.getInstance();
 		
 		// objets bidons
-		Nouvelle nouvelle1 = new Nouvelle("Des solar flares en 2023", "Russell");
+		Nouvelle nouvelle1 = new Nouvelle("Des solar flares en 2023", "Marina");
 		Nouvelle nouvelle2 = new Nouvelle("Les indiens sur la lune", "Pete Scott");
 		Nouvelle nouvelle3 = new Nouvelle("Les perseides en aout", "Julie Deschamps");
 		Nouvelle nouvelle4 = new Nouvelle("Des travaux enfin !", "Julie Deschamps");
@@ -33,5 +33,7 @@ public class ControleurNouvelles extends Controleur {
 		
 		vue.afficherNouvelles2(nouvelles);		
 	}
+	
+	
 
 }
