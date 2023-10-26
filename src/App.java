@@ -51,7 +51,7 @@ public class App {
 			System.out.println(cocktail.getNom());
 		}
 		
-		ChercheurDeCocktail chercheur = new ChercheurDeCocktail(cocktails);
+		ChercheurDeCocktails chercheur = new ChercheurDeCocktails(cocktails);
 		chercheur.executer();		
 		
 		//Fenetre.launch(Fenetre.class, parametres);	

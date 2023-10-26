@@ -3,12 +3,12 @@ import java.util.List;
 
 import modele.Cocktail;
 
-public class ChercheurDeCocktail {
+public class ChercheurDeCocktails {
 
 	protected List<Cocktail> tousLesCocktails;
 	protected List<Cocktail> selection;
 	
-	public ChercheurDeCocktail(List<Cocktail> cocktails)
+	public ChercheurDeCocktails(List<Cocktail> cocktails)
 	{
 		this.tousLesCocktails = cocktails;
 	}
@@ -22,37 +22,14 @@ public class ChercheurDeCocktail {
 	
 	public List<Cocktail> filterParIngredients(List<Cocktail> cocktails)
 	{
-		List<Cocktail> selection = new ArrayList<Cocktail>();
-		
-		for(Cocktail cocktail:cocktails)
-		{
-			//if(condition)
-			selection.add(cocktail);
-		}
-		
-		return selection;
+		return cocktails;
 	}
 	public List<Cocktail> filtrerSelonAlcool(List<Cocktail> cocktails)
 	{
-		List<Cocktail> selection = new ArrayList<Cocktail>();
-		for(Cocktail cocktail:cocktails)
-		{
-			//if(condition)
-			selection.add(cocktail);
-		}
-		
-		return selection;
+		return cocktails;
 	}
 	public List<Cocktail> filtrerSelonMotsCles(List<Cocktail> cocktails)
 	{
-		List<Cocktail> selection = new ArrayList<Cocktail>();
-		for(Cocktail cocktail:cocktails)
-		{
-			//if(condition)
-			selection.add(cocktail);
-		}
-		
-		return selection;
-	}
-	
+		return cocktails;
+	}	
 }
